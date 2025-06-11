@@ -1,0 +1,259 @@
+[I 240902 09:10:11 testsomething:85] on open
+[I 240902 09:10:11 sellordersoket:85] on open
+[I 240902 10:32:05 sellordersoket:85] on open
+[I 240902 10:38:16 sellordersoket:85] on open
+[I 240902 12:14:29 testsomething:85] on open
+[I 240902 13:39:15 sellordersoket:85] on open
+[W 240902 13:53:15 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[W 240902 13:53:15 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 13:53:25 testsomething:85] on open
+[E 240902 13:53:25 testsomething:91] Connection closed
+[W 240902 13:53:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 13:53:25 testsomething:91] Connection closed
+[W 240902 13:53:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 13:53:25 testsomething:91] Connection closed
+[W 240902 13:53:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 13:53:25 testsomething:91] Connection closed
+[W 240902 13:53:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240902 13:53:25 sellordersoket:85] on open
+[E 240902 13:53:25 sellordersoket:91] Connection closed
+[W 240902 13:53:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 13:53:25 sellordersoket:91] Connection closed
+[W 240902 13:53:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 13:53:25 sellordersoket:91] Connection closed
+[W 240902 13:53:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 13:53:25 sellordersoket:91] Connection closed
+[W 240902 13:53:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240902 13:54:21 testsomething:85] on open
+[I 240902 13:54:24 sellordersoket:85] on open
+[W 240902 14:15:55 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240902 14:15:58 smartWebSocketV2:212] Error occurred during subscribe: [Errno 32] Broken pipe
+[W 240902 14:16:07 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240902 14:16:12 smartWebSocketV2:212] Error occurred during subscribe: [Errno 32] Broken pipe
+[E 240902 14:16:35 testsomething:91] Connection closed
+[W 240902 14:16:35 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:16:35 testsomething:91] Connection closed
+[W 240902 14:16:35 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:16:35 testsomething:91] Connection closed
+[W 240902 14:16:35 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:16:47 sellordersoket:91] Connection closed
+[W 240902 14:16:47 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:16:47 sellordersoket:91] Connection closed
+[W 240902 14:16:47 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:16:47 sellordersoket:91] Connection closed
+[W 240902 14:16:47 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240902 14:21:42 sellordersoket:85] on open
+[W 240902 14:21:49 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240902 14:21:51 smartWebSocketV2:212] Error occurred during subscribe: socket is already closed.
+[E 240902 14:21:59 testsomething:91] Connection closed
+[W 240902 14:21:59 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:21:59 testsomething:91] Connection closed
+[W 240902 14:21:59 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:21:59 testsomething:91] Connection closed
+[W 240902 14:21:59 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[W 240902 14:22:38 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240902 14:22:42 smartWebSocketV2:212] Error occurred during subscribe: socket is already closed.
+[E 240902 14:22:48 testsomething:91] Connection closed
+[W 240902 14:22:48 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:22:48 testsomething:91] Connection closed
+[W 240902 14:22:48 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:22:48 testsomething:91] Connection closed
+[W 240902 14:22:48 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[W 240902 14:23:00 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240902 14:23:04 smartWebSocketV2:212] Error occurred during subscribe: socket is already closed.
+[E 240902 14:23:10 testsomething:91] Connection closed
+[W 240902 14:23:10 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:23:10 testsomething:91] Connection closed
+[W 240902 14:23:10 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:23:10 testsomething:91] Connection closed
+[W 240902 14:23:10 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240902 14:23:23 testsomething:85] on open
+[W 240902 14:23:26 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240902 14:23:31 smartWebSocketV2:212] Error occurred during subscribe: socket is already closed.
+[W 240902 14:23:40 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240902 14:23:45 smartWebSocketV2:212] Error occurred during subscribe: socket is already closed.
+[E 240902 14:23:51 sellordersoket:91] Connection closed
+[W 240902 14:23:51 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:23:51 sellordersoket:91] Connection closed
+[W 240902 14:23:51 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:23:51 sellordersoket:91] Connection closed
+[W 240902 14:23:51 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240902 14:24:08 sellordersoket:85] on open
+[W 240902 14:24:14 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240902 14:24:19 smartWebSocketV2:212] Error occurred during subscribe: socket is already closed.
+[E 240902 14:24:26 testsomething:91] Connection closed
+[W 240902 14:24:26 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:24:26 testsomething:91] Connection closed
+[W 240902 14:24:26 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:24:26 testsomething:91] Connection closed
+[W 240902 14:24:26 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[W 240902 14:25:09 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240902 14:25:14 smartWebSocketV2:212] Error occurred during subscribe: socket is already closed.
+[E 240902 14:25:19 testsomething:91] Connection closed
+[W 240902 14:25:19 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:25:19 testsomething:91] Connection closed
+[W 240902 14:25:19 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 14:25:19 testsomething:91] Connection closed
+[W 240902 14:25:19 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[W 240902 14:27:23 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240902 14:27:26 smartWebSocketV2:212] Error occurred during subscribe: socket is already closed.
+[I 240902 14:28:46 testsomething:85] on open
+[I 240902 14:31:54 sellordersoket:85] on open
+[I 240902 14:43:30 testsomething:85] on open
+[I 240902 14:43:33 sellordersoket:85] on open
+[I 240902 14:43:40 testsomething:85] on open
+[I 240902 15:45:45 sellordersoket:85] on open
+[I 240902 15:47:00 sellordersoket:85] on open
+[I 240902 16:56:54 sellordersoket:85] on open
+[I 240902 17:05:22 sellordersoket:85] on open
+[I 240902 17:06:03 sellordersoket:85] on open
+[I 240902 17:06:24 sellordersoket:85] on open
+[I 240902 17:07:54 sellordersoket:86] on open
+[I 240902 17:08:41 sellordersoket:86] on open
+[I 240902 17:09:01 sellordersoket:86] on open
+[I 240902 17:10:47 sellordersoket:86] on open
+[I 240902 17:14:00 sellordersoket:86] on open
+[I 240902 17:14:27 sellordersoket:86] on open
+[I 240902 17:14:59 sellordersoket:86] on open
+[I 240902 17:16:00 sellordersoket:86] on open
+[I 240902 17:16:47 testsomething:85] on open
+[I 240902 17:17:45 testsomething:85] on open
+[I 240902 17:18:29 sellordersoket:86] on open
+[I 240902 17:21:23 sellordersoket:86] on open
+[W 240902 17:21:23 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 17:21:33 sellordersoket:86] on open
+[E 240902 17:21:34 sellordersoket:92] Connection closed
+[W 240902 17:21:34 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:21:34 sellordersoket:92] Connection closed
+[W 240902 17:21:34 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:21:34 sellordersoket:92] Connection closed
+[W 240902 17:21:34 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240902 17:23:56 sellordersoket:86] on open
+[I 240902 17:26:44 sellordersoket:86] on open
+[W 240902 17:28:50 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 17:29:00 sellordersoket:86] on open
+[E 240902 17:29:00 sellordersoket:92] Connection closed
+[W 240902 17:29:00 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:29:00 sellordersoket:92] Connection closed
+[W 240902 17:29:00 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:29:00 sellordersoket:92] Connection closed
+[W 240902 17:29:00 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:29:04 smartWebSocketV2:212] Error occurred during subscribe: Connection is already closed.
+[I 240902 17:29:57 sellordersoket:86] on open
+[I 240902 17:30:39 sellordersoket:86] on open
+[I 240902 17:31:45 sellordersoket:86] on open
+[I 240902 17:43:30 sellordersoket:86] on open
+[W 240902 17:43:30 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 17:43:39 sellordersoket:86] on open
+[W 240902 17:43:39 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 17:43:50 sellordersoket:86] on open
+[E 240902 17:43:50 sellordersoket:92] Connection closed
+[W 240902 17:43:50 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:43:50 sellordersoket:92] Connection closed
+[W 240902 17:43:50 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:43:50 sellordersoket:92] Connection closed
+[W 240902 17:43:50 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:43:54 smartWebSocketV2:212] Error occurred during subscribe: Connection is already closed.
+[I 240902 17:46:42 sellordersoket:86] on open
+[W 240902 17:46:42 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 17:46:53 sellordersoket:86] on open
+[E 240902 17:46:53 sellordersoket:92] Connection closed
+[W 240902 17:46:53 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:46:53 sellordersoket:92] Connection closed
+[W 240902 17:46:53 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:46:53 sellordersoket:92] Connection closed
+[W 240902 17:46:53 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:46:57 smartWebSocketV2:212] Error occurred during subscribe: Connection is already closed.
+[I 240902 17:47:27 sellordersoket:86] on open
+[W 240902 17:47:27 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 17:47:37 sellordersoket:86] on open
+[E 240902 17:47:37 sellordersoket:92] Connection closed
+[W 240902 17:47:37 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:47:37 sellordersoket:92] Connection closed
+[W 240902 17:47:37 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:47:37 sellordersoket:92] Connection closed
+[W 240902 17:47:37 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:47:42 smartWebSocketV2:212] Error occurred during subscribe: Connection is already closed.
+[I 240902 17:48:26 sellordersoket:86] on open
+[W 240902 17:48:26 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 17:48:36 sellordersoket:86] on open
+[E 240902 17:48:36 sellordersoket:92] Connection closed
+[W 240902 17:48:36 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:48:36 sellordersoket:92] Connection closed
+[W 240902 17:48:36 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:48:36 sellordersoket:92] Connection closed
+[W 240902 17:48:36 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:48:41 smartWebSocketV2:212] Error occurred during subscribe: Connection is already closed.
+[I 240902 17:48:53 sellordersoket:86] on open
+[W 240902 17:48:53 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 17:49:05 sellordersoket:86] on open
+[W 240902 17:49:05 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 17:49:15 sellordersoket:86] on open
+[E 240902 17:49:16 sellordersoket:92] Connection closed
+[W 240902 17:49:16 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:49:16 sellordersoket:92] Connection closed
+[W 240902 17:49:16 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:49:16 sellordersoket:92] Connection closed
+[W 240902 17:49:16 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 17:49:20 smartWebSocketV2:212] Error occurred during subscribe: Connection is already closed.
+[I 240902 17:49:34 sellordersoket:86] on open
+[I 240902 17:51:01 sellordersoket:86] on open
+[I 240902 17:51:15 sellordersoket:86] on open
+[I 240902 18:13:54 sellordersoket:86] on open
+[I 240902 18:14:43 sellordersoket:86] on open
+[I 240902 18:16:19 sellordersoket:86] on open
+[I 240902 20:28:22 sellordersoket:86] on open
+[I 240902 20:28:55 sellordersoket:86] on open
+[I 240902 20:35:25 sellordersoket:86] on open
+[I 240902 20:49:21 sellordersoket:87] on open
+[I 240902 20:54:56 sellordersoket:87] on open
+[I 240902 20:55:13 sellordersoket:87] on open
+[I 240902 20:57:05 sellordersoket:87] on open
+[I 240902 20:59:59 testsomething:85] on open
+[I 240902 21:01:47 testsomething:86] on open
+[I 240902 21:02:24 testsomething:86] on open
+[I 240902 21:04:36 testsomething:86] on open
+[I 240902 21:06:04 testsomething:87] on open
+[I 240902 21:07:29 testsomething:88] on open
+[I 240902 21:12:06 testsomething:86] on open
+[I 240902 21:12:46 testsomething:86] on open
+[I 240902 21:13:28 testsomething:86] on open
+[I 240902 21:13:44 sellordersoket:87] on open
+[I 240902 21:14:27 testsomething:87] on open
+[E 240902 21:16:23 smartWebSocketV2:212] Error occurred during subscribe: socket is already closed.
+[I 240902 21:16:27 sellordersoket:87] on open
+[W 240902 21:16:27 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 21:16:37 sellordersoket:87] on open
+[E 240902 21:16:37 sellordersoket:93] Connection closed
+[W 240902 21:16:37 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 21:16:37 sellordersoket:93] Connection closed
+[W 240902 21:16:37 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 21:16:37 sellordersoket:93] Connection closed
+[W 240902 21:16:37 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240902 21:16:44 sellordersoket:87] on open
+[W 240902 21:16:44 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 21:16:54 sellordersoket:87] on open
+[E 240902 21:16:55 sellordersoket:93] Connection closed
+[W 240902 21:16:55 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 21:16:55 sellordersoket:93] Connection closed
+[W 240902 21:16:55 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 21:16:55 sellordersoket:93] Connection closed
+[W 240902 21:16:55 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240902 21:17:58 testsomething:86] on open
+[I 240902 21:18:09 testsomething:86] on open
+[I 240902 21:18:50 testsomething:86] on open
+[I 240902 21:19:10 testsomething:86] on open
+[I 240902 21:20:34 sellordersoket:87] on open
+[W 240902 21:20:34 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 21:21:22 testsomething:86] on open
+[I 240902 21:21:37 testsomething:86] on open
+[I 240902 21:24:53 sellordersoket:87] on open
+[W 240902 21:24:53 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240902 21:25:04 sellordersoket:87] on open
+[E 240902 21:25:04 sellordersoket:93] Connection closed
+[W 240902 21:25:04 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 21:25:04 sellordersoket:93] Connection closed
+[W 240902 21:25:04 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240902 21:25:04 sellordersoket:93] Connection closed
+[W 240902 21:25:04 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240902 21:25:36 sellordersoket:87] on open

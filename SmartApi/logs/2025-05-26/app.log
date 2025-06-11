@@ -1,0 +1,3 @@
+[I 250526 09:45:18 testsomething:109] on open
+[W 250526 11:18:23 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 250526 11:18:34 testsomething:109] on open

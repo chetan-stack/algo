@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto Order Book</title>
+</head>
+<body>
+    <h1>Crypto Order Book Summary</h1>
+
+    <!-- Date Filter Form -->
+    <form method="get" action="/">
+        <label for="date">Filter by Date:</label>
+        <input type="date" id="date" name="date" value="{{ filter_date }}">
+        <button type="submit">Filter</button>
+    </form>
+
+    <br><hr><br>
+
+<!-- Trading Form (POST) -->
+<form method="POST">
+    <!-- Auto Place Order -->
+    <label class="tooltip">
+        <input type="checkbox" name="auto_place_order"
+            {% if form_data.get("auto_place_order") %}checked{% endif %}>
+        Auto Place Order
+        <span class="tooltiptext">Enable auto-trading for faster execution.</span>
+    </label>
+    <br><br>
+
+    <!-- Buy/Sell -->
+    <label title="Select Buy">
+        <input type="radio" name="buy_or_sell" value="BUY"
+            {% if form_data.get("buy_or_sell") == "BUY" %}checked{% endif %}>
+        Buy
+    </label>
+    <label title="Select Sell">
+        <input type="radio" name="buy_or_sell" value="SELL"
+            {% if form_data.get("buy_or_sell") == "SELL" %}checked{% endif %}>
+        Sell
+    </label>
+    <br><br>
+
+    <!-- Stop Loss -->
+    <label class="tooltip">
+        Stop Loss:
+        <input type="number" name="stop_loss" value="{{ form_data.get('stop_loss', '') }}" required>
+        <span class="tooltiptext">Set the stop-loss price to limit potential losses.</span>
+    </label>
+    <br><br>
+
+    <!-- Lot Size -->
+    <label class="tooltip">
+        Lotsize:
+        <input type="number" name="lotsize" value="{{ form_data.get('lotsize', '') }}" required>
+        <span class="tooltiptext">Number of lots to trade.</span>
+    </label>
+    <br><br>
+
+    <!-- Target -->
+    <label class="tooltip">
+        Target:
+        <input type="number" name="target_points" value="{{ form_data.get('target_points', '') }}" required>
+        <span class="tooltiptext">Set the target price to book profits.</span>
+    </label>
+    <br><br>
+
+    <!-- Stoploss Points -->
+    <label class="tooltip">
+        Stoploss Points:
+        <input type="number" name="loss_points" value="{{ form_data.get('loss_points', '') }}" required>
+        <span class="tooltiptext">Set the loss threshold to exit trade.</span>
+    </label>
+    <br><br>
+
+    <!-- Trade Range Min -->
+    <label class="tooltip">
+        Trade Range Min:
+        <input type="number" name="trade_range_min" value="{{ form_data.get('trade_range_min', '') }}" required>
+        <span class="tooltiptext">Enter the minimum range to trade in.</span>
+    </label>
+    <br><br>
+
+    <!-- Trade Range Max -->
+    <label class="tooltip">
+        Trade Range Max:
+        <input type="number" name="trade_range_max" value="{{ form_data.get('trade_range_max', '') }}" required>
+        <span class="tooltiptext">Enter the maximum range to trade in.</span>
+    </label>
+    <br><br>
+
+    <!-- Nifty Option -->
+
+
+    <button type="submit">Submit</button>
+
+    <p>Total Profit/Loss: {{ total_profit_or_loss }}</p>
+    <p>Number of Orders: {{ order_count }}</p>
+    <p>Brokerage: {{ brokerage }}</p>
+    <p>stoplossorder {{stoplossorder}}</p>
+
+    <h2>Order Details</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Symbol</th>
+            <th>Lotsize</th>
+            <th>Buy Price</th>
+            <th>Target</th>
+            <th>Target Points</th>
+            <th>Stop Loss</th>
+            <th>Stoploss Points</th>
+            <th>Created Date</th>
+            <th>Profit</th>
+            <th>View Chart</th>
+
+        </tr>
+        {% for item in fetchdata %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.script }}</td>
+            <td>{{ item.lotsize }}</td>
+            <td>{{ item.ltp }}</td>
+            <td>{{ (item.ltp * 1.10) }}</td>
+            <td>{{ (item.ltp * 1.10) - item.ltp }}</td>
+            <td>{{ (item.ltp * 0.97) }}</td>
+            <td>{{ (item.ltp * 0.97) - item.ltp }}</td>
+            <td>{{ item.createddate }}</td>
+            <td>{{ item.profit }}</td>
+<td><a href="https://www.delta.exchange/app/options_chain/trade/BTC/C-BTC-102400-220125" target="_blank" class="button">View</a></td>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,9 @@
+[I 250115 09:26:21 testsomething:86] on open
+[W 250115 11:58:15 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 250115 11:58:18 smartWebSocketV2:212] Error occurred during subscribe: [Errno 32] Broken pipe
+[E 250115 11:58:25 testsomething:92] Connection closed
+[W 250115 11:58:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 250115 11:58:25 testsomething:92] Connection closed
+[W 250115 11:58:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 250115 11:58:25 testsomething:92] Connection closed
+[W 250115 11:58:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.

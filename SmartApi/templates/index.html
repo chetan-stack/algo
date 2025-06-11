@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask WebView</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+ <script>
+        // Function to refresh the page every 3 seconds
+        function refreshPage() {
+            setInterval(function() {
+                window.location.reload();
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    </script>
+     <script>
+        function toggleTable() {
+            var table = document.getElementById("tradeTable");
+            var button = document.getElementById("toggleButton");
+            if (table.style.display === "none") {
+                table.style.display = "table";
+                button.innerText = "Hide Table";
+            } else {
+                table.style.display = "none";
+                button.innerText = "Show Table";
+            }
+        }
+    </script>
+</head>
+<body>
+   <h1> Traded data  - Profit : {{allprofit}}</h1>
+   <form method="POST">
+        <!-- Auto Place Order -->
+        <label class="tooltip">
+            <input type="checkbox" name="auto_place_order"
+                {% if form_data.get("auto_place_order") %}checked{% endif %}>
+            Auto Place Order
+            <span class="tooltiptext">Enable auto-trading for faster execution.</span>
+        </label>
+        <br><br>
+
+       <!-- Simple Buy/Sell Radio Buttons -->
+        <label title="Select Buy">
+            <input type="radio" name="buy_or_sell" value="BUY"
+                {% if form_data.get("buy_or_sell") == "BUY" %}checked{% endif %}>
+            Buy
+        </label>
+        <label title="Select Sell">
+            <input type="radio" name="buy_or_sell" value="SELL"
+                {% if form_data.get("buy_or_sell") == "SELL" %}checked{% endif %}>
+            Sell
+        </label>
+ <br><br>
+        <!-- Stop Loss -->
+        <label class="tooltip">
+            Stop Loss:
+            <input type="number" name="stop_loss" value="{{ form_data.get('stop_loss', '') }}" required>
+            <span class="tooltiptext">Set the stop-loss price to limit potential losses.</span>
+        </label>
+        <br><br>
+
+       <!-- Stop Loss -->
+        <label class="tooltip">
+            Lotsize:
+            <input type="number" name="lotsize" value="{{ form_data.get('lotsize', '') }}" required>
+            <span class="tooltiptext">Set the stop-loss price to limit potential losses.</span>
+        </label>
+        <br><br>
+
+       <!-- Stop Loss -->
+        <label class="tooltip">
+            Target:
+            <input type="number" name="target_points" value="{{ form_data.get('target_points', '') }}" required>
+            <span class="tooltiptext">Set the target price to limit potential profit.</span>
+        </label>
+        <br><br>
+
+
+       <!-- Stop Loss -->
+        <label class="tooltip">
+            Stoploss Points:
+            <input type="number" name="loss_points" value="{{ form_data.get('loss_points', '') }}" required>
+            <span class="tooltiptext">Set the target price to limit potential profit.</span>
+        </label>
+        <br><br>
+
+        <!-- Trade Range Min -->
+        <label class="tooltip">
+            Trade Range Min:
+            <input type="number" name="trade_range_min" value="{{ form_data.get('trade_range_min', '') }}" required>
+            <span class="tooltiptext">Enter the minimum price range where trades should not be executed.</span>
+        </label>
+        <br><br>
+
+        <!-- Trade Range Max -->
+        <label class="tooltip">
+            Trade Range Max:
+            <input type="number" name="trade_range_max" value="{{ form_data.get('trade_range_max', '') }}" required>
+            <span class="tooltiptext">Enter the maximum price range where trades should not be executed.</span>
+        </label>
+        <br><br>
+
+        <!-- Nifty Option -->
+        <label class="tooltip">
+            <input type="checkbox" name="trade_nifty"
+                {% if form_data.get("NIFTY") %}checked{% endif %}>
+            Trade Nifty
+            <span class="tooltiptext">Enable trading for Nifty 50 index.</span>
+        </label>
+        <br><br>
+
+        <!-- Bank Nifty Option -->
+        <label class="tooltip">
+            <input type="checkbox" name="trade_banknifty"
+                {% if form_data.get("BANKNIFTY") %}checked{% endif %}>
+            Trade Bank Nifty
+            <span class="tooltiptext">Enable trading for Bank Nifty index.</span>
+        </label>
+        <br><br>
+
+       <!-- Bank Nifty Option -->
+        <label class="tooltip">
+            <input type="checkbox" name="trade_SENSEX"
+                {% if form_data.get("SENSEX") %}checked{% endif %}>
+            Trade Bank SENSEX
+            <span class="tooltiptext">Enable trading for Bank SENSEX index.</span>
+        </label>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+   <br><br>
+    <button id="toggleButton" onclick="toggleTable()">Hide Table</button><br><br>
+
+   <div>
+        <table id="tradeTable" border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Total Orders</th>
+                <th>Stoploss Orders</th>
+                <th>Profit</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for date, stats in monthwisedata['dailyBreakdown'].items() %}
+            <tr>
+                <td>{{ date }}</td>
+                <td>{{ stats.orders }}</td>
+                <td>{{ stats.stoplosses }}</td>
+                <td>{{ stats.profit }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h3>Total Summary</h3>
+    <p>Total Orders: {{ monthwisedata.totalOrder }}</p>
+    <p>Stoploss Orders: {{ monthwisedata.stoplossOrder }}</p>
+    <p>Total Profit: ₹{{ monthwisedata.totalProfit }}</p>
+   </div>
+
+   <h2>Current Market Trends</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Trend</th>
+            <th>Core Buy</th>
+            <th>Core Sell</th>
+            <th>sideways_info</th>
+            <th>support</th>
+            <th>resistance </th>
+            <th>fibonacci_levels</th>
+            <th>current_price</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in store %}
+        <tr>
+            <td>{{ item.symbol }}</td>
+            <td>{{ item.trend }}</td>
+             <td>{{ item.returncorebuy }}</td>
+             <td>{{ item.returncoresell }}</td>
+            <td>{{ item.sideways_info }}</td>
+            <td>{{ item.support }}</td>
+            <td>{{ item.resistance }}</td>
+            <td>{{ item.fibonacci_levels }}</td>
+            <td>{{ item.current_price }}</td>
+
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Script</th>
+                <th>Token</th>
+                <th>Lot Size</th>
+                <th>LPT</th>
+                <th>Buy Price</th>
+                  <th>trailing_stoploss_price</th>
+                  <th>max_price_achieved</th>
+                  <th>target_price</th>
+                <th>Profit</th>
+                <th>Profit data</th>
+                <th>Created Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in fetchdata %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.script }}</td>
+                    <td>{{ item.token }}</td>
+                    <td>{{ item.lotsize }}</td>
+                    <td>{{ item.nltp }}</td>
+                    <td>{{ item.ltp }}</td>
+                    <td>{{ item.trailing_stoploss_price }}</td>
+                    <td>{{ item.max_price_achieved }}</td>
+                    <td>{{ item.target_price }}</td>
+                    <td>{{ item.profit }}</td>
+                    <td>{{ item.profittext}}</td>
+                    <td>{{ item.createddate }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+
+<script>
+    function splitAndReturnTable(data) {
+    // Split the input data into components
+    const parts = data.split(' - ');
+
+    // Extract values
+    const ltp = parts[0].split(': ')[1];
+    const buyPrice = parts[1].split(' ')[1];
+    const profit = parts[2].split(' ')[1];
+
+    // Create HTML table
+    const table = `
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Label</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LTP</td>
+                    <td>${ltp}</td>
+                </tr>
+                <tr>
+                    <td>Buy Price</td>
+                    <td>${buyPrice}</td>
+                </tr>
+                <tr>
+                    <td>Profit</td>
+                    <td>${profit}</td>
+                </tr>
+            </tbody>
+        </table>
+    `;
+
+    return table;
+}
+</script>
+
+</html>
+
+

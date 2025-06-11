@@ -1,0 +1,10 @@
+[I 250224 09:22:47 testsomething:87] on open
+[I 250224 14:52:31 testsomething:87] on open
+[W 250224 17:29:17 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 250224 17:29:27 testsomething:87] on open
+[E 250224 18:02:02 testsomething:93] Connection closed
+[W 250224 18:02:02 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 250224 18:02:02 testsomething:93] Connection closed
+[W 250224 18:02:02 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 250224 18:02:02 testsomething:93] Connection closed
+[W 250224 18:02:02 smartWebSocketV2:343] Connection closed due to max retry attempts reached.

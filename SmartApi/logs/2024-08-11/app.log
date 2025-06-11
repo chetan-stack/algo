@@ -1,0 +1,288 @@
+[I 240811 10:38:23 smartwebsocketexamplev2:74] on open
+[W 240811 10:38:43 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 10:40:42 smartwebsocketexamplev2:74] on open
+[W 240811 10:41:30 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 10:41:37 smartwebsocketexamplev2:74] on open
+[W 240811 10:41:57 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 10:42:04 smartwebsocketexamplev2:74] on open
+[W 240811 10:47:57 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 10:48:01 smartwebsocketexamplev2:74] on open
+[W 240811 10:49:47 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 10:49:51 smartwebsocketexamplev2:74] on open
+[W 240811 11:48:52 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 11:49:02 smartwebsocketexamplev2:74] on open
+[W 240811 11:49:02 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 11:49:12 smartwebsocketexamplev2:74] on open
+[E 240811 11:49:12 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:49:12 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:49:12 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:49:12 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:49:12 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:49:12 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:49:17 smartWebSocketV2:260] Error occurred during unsubscribe: Connection is already closed.
+[I 240811 11:49:37 smartwebsocketexamplev2:74] on open
+[W 240811 11:49:37 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 11:49:48 smartwebsocketexamplev2:74] on open
+[E 240811 11:49:48 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:49:48 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:49:48 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:49:48 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:49:48 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:49:48 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:49:53 smartWebSocketV2:260] Error occurred during unsubscribe: Connection is already closed.
+[I 240811 11:51:00 smartwebsocketexamplev2:74] on open
+[W 240811 11:51:00 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 11:51:11 smartwebsocketexamplev2:74] on open
+[E 240811 11:51:11 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:51:11 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:51:11 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:51:11 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:51:11 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:51:11 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:51:16 smartWebSocketV2:260] Error occurred during unsubscribe: Connection is already closed.
+[I 240811 11:51:35 smartwebsocketexamplev2:74] on open
+[W 240811 11:51:55 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 11:52:00 smartwebsocketexamplev2:74] on open
+[W 240811 11:52:00 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 11:52:10 smartwebsocketexamplev2:74] on open
+[E 240811 11:52:10 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:52:10 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:52:10 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:52:10 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:52:10 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:52:10 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:52:15 smartWebSocketV2:260] Error occurred during unsubscribe: Connection is already closed.
+[I 240811 11:52:25 smartwebsocketexamplev2:74] on open
+[W 240811 11:53:09 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 11:53:12 smartwebsocketexamplev2:74] on open
+[W 240811 11:54:51 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 11:54:57 smartwebsocketexamplev2:74] on open
+[W 240811 11:54:57 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 11:55:07 smartwebsocketexamplev2:74] on open
+[E 240811 11:55:08 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:55:08 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:55:08 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:55:08 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:55:08 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:55:08 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 11:57:32 smartwebsocketexamplev2:74] on open
+[W 240811 11:57:58 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 11:58:04 smartwebsocketexamplev2:74] on open
+[W 240811 11:58:04 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240811 11:58:14 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:58:14 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:58:14 smartwebsocketexamplev2:80] Connection closed
+[W 240811 11:58:14 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 11:59:44 smartwebsocketexamplev2:77] on open
+[W 240811 11:59:44 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 11:59:54 smartwebsocketexamplev2:77] on open
+[E 240811 11:59:54 smartwebsocketexamplev2:83] Connection closed
+[W 240811 11:59:54 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:59:54 smartwebsocketexamplev2:83] Connection closed
+[W 240811 11:59:54 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 11:59:54 smartwebsocketexamplev2:83] Connection closed
+[W 240811 11:59:54 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:00:07 smartwebsocketexamplev2:77] on open
+[W 240811 12:00:22 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:00:27 smartwebsocketexamplev2:77] on open
+[W 240811 12:00:43 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:00:48 smartwebsocketexamplev2:77] on open
+[W 240811 12:00:48 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:00:58 smartwebsocketexamplev2:77] on open
+[E 240811 12:00:58 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:00:58 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:00:58 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:00:58 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:00:58 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:00:58 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:01:10 smartwebsocketexamplev2:77] on open
+[W 240811 12:02:49 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:02:55 smartwebsocketexamplev2:77] on open
+[W 240811 12:02:55 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240811 12:03:00 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:03:00 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:03:00 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:03:00 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:06:39 smartwebsocketexamplev2:77] on open
+[W 240811 12:06:39 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:06:49 smartwebsocketexamplev2:77] on open
+[E 240811 12:06:49 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:06:49 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:06:49 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:06:49 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:06:49 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:06:49 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:07:09 smartwebsocketexamplev2:77] on open
+[W 240811 12:08:49 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:08:59 smartwebsocketexamplev2:77] on open
+[I 240811 12:09:42 smartwebsocketexamplev2:77] on open
+[W 240811 12:09:42 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:09:52 smartwebsocketexamplev2:77] on open
+[E 240811 12:09:52 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:09:52 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:09:52 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:09:52 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:09:52 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:09:52 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:10:29 smartwebsocketexamplev2:77] on open
+[W 240811 12:10:29 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:10:40 smartwebsocketexamplev2:77] on open
+[E 240811 12:10:40 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:10:40 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:10:40 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:10:40 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:10:40 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:10:40 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:11:30 smartwebsocketexamplev2:77] on open
+[W 240811 12:11:30 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:11:40 smartwebsocketexamplev2:77] on open
+[E 240811 12:11:40 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:11:40 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:11:40 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:11:40 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:11:40 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:11:40 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:12:03 smartwebsocketexamplev2:77] on open
+[W 240811 12:12:03 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:12:13 smartwebsocketexamplev2:77] on open
+[E 240811 12:12:13 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:12:13 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:12:13 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:12:13 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:12:13 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:12:13 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:12:59 smartwebsocketexamplev2:77] on open
+[W 240811 12:16:05 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:16:09 smartwebsocketexamplev2:77] on open
+[W 240811 12:16:22 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:16:26 smartwebsocketexamplev2:77] on open
+[W 240811 12:16:56 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:17:02 smartwebsocketexamplev2:77] on open
+[W 240811 12:17:40 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:17:44 smartwebsocketexamplev2:77] on open
+[W 240811 12:17:44 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240811 12:17:51 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:17:51 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:17:51 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:17:51 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:19:17 smartwebsocketexamplev2:77] on open
+[W 240811 12:21:20 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:21:24 smartwebsocketexamplev2:77] on open
+[W 240811 12:21:46 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:21:54 smartwebsocketexamplev2:77] on open
+[W 240811 12:22:06 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:22:17 smartwebsocketexamplev2:77] on open
+[I 240811 12:23:15 smartwebsocketexamplev2:77] on open
+[W 240811 12:23:15 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:23:25 smartwebsocketexamplev2:77] on open
+[E 240811 12:23:25 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:23:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:23:25 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:23:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:23:25 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:23:25 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:23:46 smartwebsocketexamplev2:77] on open
+[W 240811 12:24:39 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:24:43 smartwebsocketexamplev2:77] on open
+[W 240811 12:24:43 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:24:53 smartwebsocketexamplev2:77] on open
+[E 240811 12:24:53 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:24:53 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:24:53 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:24:53 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:24:53 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:24:53 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:25:03 smartwebsocketexamplev2:77] on open
+[W 240811 12:25:03 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240811 12:25:09 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:25:09 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:25:09 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:25:09 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:25:15 smartwebsocketexamplev2:77] on open
+[W 240811 12:25:15 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 240811 12:25:18 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:25:18 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:25:18 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:25:18 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:25:45 smartwebsocketexamplev2:77] on open
+[W 240811 12:25:45 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:25:55 smartwebsocketexamplev2:77] on open
+[E 240811 12:25:55 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:25:55 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:25:55 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:25:55 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:25:55 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:25:55 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:26:06 smartwebsocketexamplev2:77] on open
+[W 240811 12:26:06 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:26:17 smartwebsocketexamplev2:77] on open
+[E 240811 12:26:17 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:26:17 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:26:17 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:26:17 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:26:17 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:26:17 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:26:36 smartwebsocketexamplev2:77] on open
+[W 240811 12:26:36 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:26:46 smartwebsocketexamplev2:77] on open
+[E 240811 12:26:46 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:26:46 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:26:46 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:26:46 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:26:46 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:26:46 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:26:51 smartwebsocketexamplev2:77] on open
+[W 240811 12:27:30 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:27:33 smartwebsocketexamplev2:77] on open
+[W 240811 12:27:33 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:27:44 smartwebsocketexamplev2:77] on open
+[E 240811 12:27:44 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:27:44 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:27:44 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:27:44 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:27:44 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:27:44 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:28:05 smartwebsocketexamplev2:77] on open
+[W 240811 12:28:28 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:28:33 smartwebsocketexamplev2:77] on open
+[W 240811 12:28:33 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:28:43 smartwebsocketexamplev2:77] on open
+[E 240811 12:28:44 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:28:44 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:28:44 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:28:44 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:28:44 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:28:44 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:28:55 smartwebsocketexamplev2:77] on open
+[W 240811 12:28:55 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:29:05 smartwebsocketexamplev2:77] on open
+[E 240811 12:29:05 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:29:05 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:29:05 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:29:05 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:29:05 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:29:05 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:29:17 smartwebsocketexamplev2:77] on open
+[W 240811 12:29:17 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:29:27 smartwebsocketexamplev2:77] on open
+[E 240811 12:29:27 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:29:27 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:29:27 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:29:27 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:29:27 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:29:27 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:29:39 smartwebsocketexamplev2:77] on open
+[W 240811 12:29:39 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:29:49 smartwebsocketexamplev2:77] on open
+[E 240811 12:29:49 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:29:49 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:29:49 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:29:49 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[E 240811 12:29:49 smartwebsocketexamplev2:83] Connection closed
+[W 240811 12:29:49 smartWebSocketV2:343] Connection closed due to max retry attempts reached.
+[I 240811 12:30:24 smartwebsocketexamplev2:77] on open
+[W 240811 12:30:43 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:30:49 smartwebsocketexamplev2:77] on open
+[W 240811 12:31:10 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 240811 12:31:13 smartwebsocketexamplev2:77] on open
+[W 240811 12:31:39 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...

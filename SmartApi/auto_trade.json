@@ -1,0 +1,51 @@
+{
+    "auto_place_order": true,
+    "stop_loss": "2",
+    "lotsize": "1",
+    "target_points": "30",
+    "loss_points": "40",
+    "trade_range_min": "5",
+    "trade_range_max": "15",
+    "NIFTY": true,
+    "BANKNIFTY": false,
+    "SENSEX": false,
+    "buy_or_sell": "SELL",
+    "store": [
+        {
+            "symbol": "SENSEX",
+            "trend": "wait",
+            "returncorebuy": "\u2705 adx > 20 | \u274c ema > ema20, close > ema9, ema_slope > 0.1, atr > atr_avg, volume > avg, range > avg",
+            "returncoresell": "\u2705 ema < ema20, close < ema9, adx > 20, ema_slope < -0.1 | \u274c atr > atr_avg, volume > avg, range > avg",
+            "trend_message": "\u26a0\ufe0f Price near key support level.\n\ud83d\udca1 Wait for breakout or confirmation before entering a trade.",
+            "fibonacci_levels": "{}",
+            "resistance": "82563.25",
+            "support": "82481.23",
+            "sideways_info": "",
+            "current_price": "82492.18"
+        },
+        {
+            "symbol": "BANKNIFTY",
+            "trend": "wait",
+            "returncorebuy": "\u2705 ema > ema20, close > ema9, adx > 20, ema_slope > 0.1 | \u274c atr > atr_avg, volume > avg, range > avg",
+            "returncoresell": "\u2705 adx > 20 | \u274c ema < ema20, close < ema9, ema_slope < -0.1, atr > atr_avg, volume > avg, range > avg",
+            "trend_message": "\u26a0\ufe0f Price near key resistance level.\n\ud83d\udca1 Wait for breakout or confirmation before entering a trade.",
+            "fibonacci_levels": "{'highest_price': 56669.3, 'lowest_price': 56443.85, '0.786': 56621, '0.618': 56583, '0.5': 56557, '0.382': 56530, '0.236': 56497, '0': 56443.85}",
+            "resistance": "56626.8",
+            "support": "56568.25",
+            "sideways_info": "",
+            "current_price": "56623.0"
+        },
+        {
+            "symbol": "NIFTY",
+            "trend": "sell",
+            "returncorebuy": "\u2705 adx > 20, atr > atr_avg, range > avg | \u274c ema > ema20, close > ema9, ema_slope > 0.1, volume > avg",
+            "returncoresell": "\u2705 ema < ema20, close < ema9, adx > 20, ema_slope < -0.1, atr > atr_avg, range > avg | \u274c volume > avg",
+            "trend_message": "\u2705 Sell signal confirmed. Trending setup.",
+            "fibonacci_levels": "{'highest_price': 25222.4, 'lowest_price': 25081.3, '0.786': 25192, '0.618': 25168, '0.5': 25152, '0.382': 25135, '0.236': 25115, '0': 25081.3}",
+            "resistance": "25220.1",
+            "support": "25199.25",
+            "sideways_info": "",
+            "current_price": "25206.65"
+        }
+    ]
+}

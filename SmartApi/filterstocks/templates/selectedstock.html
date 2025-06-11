@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Stocks Support and Registance</h1>
+   <form method="post">
+       <input type="text" name="checklist" id="checklist" value="filter">
+       <p>Stocks closed to support and registance <span> <select name="timeframe2" id="timeframe2">
+            {% for tf, name in timeframes.items() %}
+                <option value="{{ tf }}" {% if timeframe == tf %}selected{% endif %}>{{ name }}</option>
+            {% endfor %}
+        </select></span> :
+               <button type="submit">Update Chart</button>
+  <p>Stocks closed to support and registance:
+<!--                <span>-->
+<!--                <select name="timeframe2" id="timeframe2">-->
+<!--            {% for tf, name in timeframes.items() %}-->
+<!--                <option value="{{ tf }}" {% if timeframe == tf %}selected{% endif %}>{{ name }}</option>-->
+<!--            {% endfor %}-->
+<!--            </select></span> <span>-->
+<!--                    <button id="callFunctionBtn">Call Function</button>-->
+<!--            </span> :-->
+          {% for sym in readeddata %}
+              <button style="margin:10px 20px" type="button" onclick="submitForm('{{ sym }}')">{{ sym }}</button>
+            {% endfor %}
+    </p>
+   </form>
+</body>
+</html>

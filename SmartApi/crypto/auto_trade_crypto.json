@@ -1,0 +1,13 @@
+{
+    "auto_place_order": true,
+    "stop_loss": "2",
+    "lotsize": "1",
+    "target_points": "300",
+    "loss_points": "150",
+    "trade_range_min": "5",
+    "trade_range_max": "15",
+    "NIFTY": false,
+    "BANKNIFTY": false,
+    "SENSEX": false,
+    "buy_or_sell": "SELL"
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Trading Data</title>
+</head>
+<body>
+    <h1>Live Trading Data</h1>
+    {% if data %}
+        <p>Symbol: {{ data.symbol }}</p>
+        <p>LTP: {{ data.ltp }}</p>
+        <p>Buy Price: {{ data.buyprice }}</p>
+        <p>Max Price Achieved: {{ data.max_price_achieved }}</p>
+    {% else %}
+        <p>No data available yet.</p>
+    {% endif %}
+</body>
+</html>

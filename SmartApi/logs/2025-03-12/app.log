@@ -1,0 +1,18 @@
+[I 250312 09:26:03 testsomething:87] on open
+[W 250312 14:20:52 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 250312 14:20:53 smartWebSocketV2:212] Error occurred during subscribe: [Errno 32] Broken pipe
+[I 250312 14:22:09 testsomething:87] on open
+[I 250312 14:44:43 testsomething:87] on open
+[I 250312 17:20:20 testsomething:87] on open
+[I 250312 17:21:14 testsomething:90] on open
+[I 250312 17:31:12 testsomething:97] on open
+[I 250312 17:31:46 testsomething:97] on open
+[I 250312 17:32:41 testsomething:98] on open
+[W 250312 17:32:41 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 250312 17:32:45 smartWebSocketV2:212] Error occurred during subscribe: Connection is already closed.
+[I 250312 17:32:51 testsomething:98] on open
+[I 250312 17:32:57 testsomething:98] on open
+[W 250312 17:32:57 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 250312 17:33:02 smartWebSocketV2:212] Error occurred during subscribe: Connection is already closed.
+[I 250312 17:33:27 testsomething:98] on open
+[I 250312 17:33:52 testsomething:98] on open

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks Support and Registance</title>
+<!--    <meta http-equiv="refresh" content="60"> &lt;!&ndash; Refresh the page every 60 seconds &ndash;&gt;-->
+
+</head>
+<body>
+    <h1>Stocks Support and Registance</h1>
+   <form method="post">
+        <label for="symbol">Select Symbol:</label>
+        <select name="symbol" id="symbol">
+            {% for sym, name in symbols.items() %}
+                <option value="{{ sym }}" {% if symbol == sym %}selected{% endif %}>{{ name }}</option>
+            {% endfor %}
+        </select>
+
+
+        <label for="timeframe">Select Time Frame:</label>
+        <select name="timeframe" id="timeframe">
+            {% for tf, name in timeframes.items() %}
+                <option value="{{ tf }}" {% if timeframe == tf %}selected{% endif %}>{{ name }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="rolling_window">Rolling Window Size:</label>
+        <input style="width:50px" type="number" name="rolling_window" id="rolling_window" value="{{ rolling_window }}" min="1">
+
+        <label for="level_diff_threshold">Level Difference Threshold:</label>
+        <input style="width:50px" type="number" name="level_diff_threshold" id="level_diff_threshold" value="{{ level_diff_threshold }}" min="1">
+
+        <label for="n_bars">Number of Bars:</label>
+        <input style="width:50px" type="number" name="n_bars" id="n_bars" value="{{ n_bars }}" min="1">
+
+        <button type="submit">Update Chart</button>
+
+    <div style="display:flex;align-item:center;">
+        <div>    <img src="{{ url_for('static', filename='chart.png') }}" alt="Nifty Chart"></div>
+        <div style="margin-top:100px;">
+              <p>Most Significant Resistance Level:
+        {% if registance_item is not none %}
+            {{ registance_item }}
+        {% else %}
+            No resistance level found
+        {% endif %}
+    </p>
+    <p>Most Significant Support Level:
+        {% if support_item is not none %}
+            {{ support_item }}
+        {% else %}
+            No support level found
+        {% endif %}
+    </p>
+            <p>Stocks closed to support and registance:
+<!--                <span>-->
+<!--                <select name="timeframe2" id="timeframe2">-->
+<!--            {% for tf, name in timeframes.items() %}-->
+<!--                <option value="{{ tf }}" {% if timeframe == tf %}selected{% endif %}>{{ name }}</option>-->
+<!--            {% endfor %}-->
+<!--            </select></span> <span>-->
+<!--                    <button id="callFunctionBtn">Call Function</button>-->
+<!--            </span> :-->
+          {% for sym in readeddata %}
+              <button style="margin:10px 20px" type="button" onclick="submitForm('{{ sym }}')">{{ sym }}</button>
+            {% endfor %}
+    </p>
+
+        </div>
+    </div>
+</form>
+<script>
+        function submitForm(symbol) {
+            document.getElementById("symbol").value = symbol;
+            document.querySelector("form").submit();
+        }
+        document.getElementById("callFunctionBtn").addEventListener("click", function() {
+            var selectedValue = document.getElementById("timeframe2").value;
+
+            // Send AJAX request to call the function
+            fetch('/selectedstock', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+              body: JSON.stringify({ selectedValue: selectedValue }), // Include selected value in request body
+
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response here
+                console.log(data.result);
+                alert(data.result); // For demonstration, you can replace this with any action you want
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

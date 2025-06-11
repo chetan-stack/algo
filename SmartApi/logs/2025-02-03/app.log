@@ -1,0 +1,10 @@
+[I 250203 09:40:17 testsomething:87] on open
+[I 250203 10:08:55 testsomething:87] on open
+[W 250203 10:08:55 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 250203 10:09:18 testsomething:87] on open
+[W 250203 10:09:18 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[I 250203 10:09:59 testsomething:87] on open
+[I 250203 10:16:28 testsomething:87] on open
+[I 250203 16:13:28 testsomething:87] on open
+[I 250203 16:13:38 testsomething:87] on open
+[I 250203 16:13:46 testsomething:87] on open

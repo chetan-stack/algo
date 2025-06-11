@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML to PDF - Landscape</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <div id="content">
+        <h1>This is a test content!</h1>
+        <p>This content will be converted into a PDF in landscape orientation.</p>
+    </div>
+
+    <button id="saveBtn">Save as PDF</button>
+
+    <script>
+        document.getElementById("saveBtn").onclick = function() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF('landscape'); // Set orientation to landscape
+
+            // Capture the content of the div
+            doc.html(document.getElementById("content"), {
+                callback: function (doc) {
+                    doc.save('content-landscape.pdf'); // Save the PDF
+                },
+                margin: 10,
+                x: 10,
+                y: 10
+            });
+        };
+    </script>
+
+</body>
+</html>
