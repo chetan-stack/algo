@@ -177,6 +177,7 @@
    </div>
 
    <h2>Current Market Trends</h2>
+   <form method="POST">
 <table>
     <thead>
         <tr>
@@ -202,6 +203,9 @@
              <td>{{ item.returncoresell }}</td>
             <td>{{ item.sideways_info }}</td>
             <td>{{ item.support }}</td>
+<!--            <td>-->
+<!--            <input type="number" name="support" value="{{ form_data.get('support', '') }}" required>-->
+<!--            </td>-->
             <td>{{ item.resistance }}</td>
             <td>{{ item.fibonacci_levels }}</td>
             <td>{{ item.current_price }}</td>
@@ -211,6 +215,7 @@
         {% endfor %}
     </tbody>
 </table>
+   </form>
 <br>
     <table>
         <thead>

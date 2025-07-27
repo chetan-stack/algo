@@ -465,11 +465,14 @@ def exitstetergy():
             # print(response)
             ticker_info = response.json()
             print(ticker_info)
+
             if 'result' not in ticker_info or 'mark_price' not in ticker_info['result']:
                 print(f"Error: Invalid API response for {symbol}")
                 continue
 
             ltp = float(ticker_info['result']['mark_price'])
+            product_id = ticker_info['result']['product_id']
+
             buy_price = item['ltp']  # Entry price
 
 
@@ -492,7 +495,7 @@ def exitstetergy():
             target = crypto_stats[symbol]['target']
             stoploss = crypto_stats[symbol]['stoploss']
             max_ltp = crypto_stats[symbol]['max_ltp']
-
+            print('id',item['id'])
             print(f"LTP: {ltp} | buyprice: {buy_price} | Target: {target} | Stoploss: {stoploss} | Max LTP: {max_ltp} | Profit: {profit} | Max Profit: {crypto_stats[symbol]['max_profit']}")
 
             if ltp >= target:
@@ -503,11 +506,13 @@ def exitstetergy():
 
                 print(f"Target hit! New Target: {crypto_stats[symbol]['target']} | New Stoploss: {crypto_stats[symbol]['stoploss']}")
             # or (ltp <= max_ltp - 5 and max_ltp - buy_price >= 10)
-            elif ltp < stoploss or (ltp <= max_ltp - 15 and max_ltp - buy_price >= 100):
+            # ltp < stoploss or (ltp <= max_ltp - 15 and max_ltp - buy_price >= 100):
+            elif ltp < stoploss or (ltp <= max_ltp - 15 and max_ltp - buy_price >= 100)::
+                print(product_id)
                 # Exit trade if:
                 # - LTP is 5 points below max LTP AND
                 # - max LTP is at least 10 points above the buy price
-                place = placeOrder.place_order(item['id'],item['lotsize'],'sell')
+                place = placeOrder.place_order(product_id,item['lotsize'],'sell')
                 if place['success'] == True:
                     crete_update_table.updatecrypto(item['id'], 0, profit)
                     bot_message = (
@@ -833,6 +838,195 @@ def calculate_atr(df, period=5):
     return df
 
 
+def get_trade_signal(df,symbol):
+    # Indicators
+    # print("---------",df)
+    df['ema_9'] = ta.ema(df['close'], length=9)
+    df['ema_20'] = ta.ema(df['close'], length=20)
+    df['ema_slope'] = df['ema_9'].diff()
+
+    adx_len = 10
+    atr_len = 10
+    rolling_len = 10
+    range_len = 10
+
+    df['adx'] = ta.adx(df['high'], df['low'], df['close'], length=adx_len)[f'ADX_{adx_len}']
+    df['atr'] = ta.atr(df['high'], df['low'], df['close'], length=atr_len)
+    df['atr_avg'] = df['atr'].rolling(window=rolling_len).mean()
+    df['vol_avg'] = df['volume'].rolling(window=rolling_len).mean()
+    df['range'] = df['high'].rolling(window=range_len).max() - df['low'].rolling(window=range_len).min()
+
+    # Support and Resistance Levels
+    lookback = 20
+    df['support'] = df['low'].rolling(window=lookback).min()
+    df['resistance'] = df['high'].rolling(window=lookback).max()
+
+    latest = df.iloc[-1]
+    # print("%%%%%%%%%%%%%%%%check-----------",latest)
+    # print(df)
+    # Fibonacci Levels Calculation
+    # Assuming 'df' has a 'datetime' column with datetime objects
+    symbol_tokens = {
+    "NIFTY": "99926000",
+    "BANKNIFTY": "99926009",
+    "SENSEX": "99926001"
+}
+    # exchange = nsechange[symbol]
+    # tradingsymbol = symbol
+    # symboltoken = symbol_tokens[symbol]  # Token for NIFTY 50 index
+
+    # Fetch LTP data
+    # ltp_data = obj.ltpData(exchange=exchange, tradingsymbol=tradingsymbol, symboltoken=symboltoken)
+    # print(df)
+    ltp_data = df.iloc[-1]
+    print("$$$$$%%%%%%%%%%%%%%%___________",ltp_data)
+    if True:
+        # Extract LTP value
+        # ltp = ltp_data['data']
+        # print(f"NIFTY 50 LTP: {ltp}")
+        highest_price = ltp_data['high']
+        lowest_price = ltp_data['low']
+        print('&&&&&$$$$$$---------check data',highest_price,lowest_price)
+        diff = highest_price - lowest_price
+        # usecase =  ltp['open'] > ltp['high']
+        fib_levels = {
+            'highest_price':highest_price,
+            'lowest_price':lowest_price,
+            '0.786': round(lowest_price + 0.786 * diff),
+            '0.618': round(lowest_price + 0.618 * diff),
+            '0.5': round(lowest_price + 0.5 * diff),
+            '0.382': round(lowest_price + 0.382 * diff),
+            '0.236': round(lowest_price + 0.236 * diff),
+            '0': lowest_price
+        }
+    else:
+        fib_levels = {}
+    # Core Buy Conditions
+    core_buy = [
+        latest['ema_9'] > latest['ema_20'],
+        latest['close'] > latest['ema_9'],
+        latest['adx'] > 20
+    ]
+    supporting_buy = [
+        latest['ema_slope'] > 0.1,
+        latest['atr'] > latest['atr_avg'],
+        latest['volume'] > latest['vol_avg'],
+        latest['range'] > df['range'].mean()
+    ]
+
+    # Core Sell Conditions
+    core_sell = [
+        latest['ema_9'] < latest['ema_20'],
+        latest['close'] < latest['ema_9'],
+        latest['adx'] > 20
+    ]
+    supporting_sell = [
+        latest['ema_slope'] < -0.1,
+        latest['atr'] > latest['atr_avg'],
+        latest['volume'] > latest['vol_avg'],
+        latest['range'] > df['range'].mean()
+    ]
+
+    returncorebuy = {
+        'ema > ema20': latest['ema_9'] > latest['ema_20'],
+        'close > ema9': latest['close'] > latest['ema_9'],
+        'adx > 20': latest['adx'] > 20,
+        'ema_slope > 0.1': latest['ema_slope'] > 0.1,
+        'atr > atr_avg': latest['atr'] > latest['atr_avg'],
+        'volume > avg': latest['volume'] > latest['vol_avg'],
+        'range > avg': latest['range'] > df['range'].mean()
+    }
+
+    returncoresell = {
+        'ema < ema20': latest['ema_9'] < latest['ema_20'],
+        'close < ema9': latest['close'] < latest['ema_9'],
+        'adx > 20': latest['adx'] > 20,
+        'ema_slope < -0.1': latest['ema_slope'] < -0.1,
+        'atr > atr_avg': latest['atr'] > latest['atr_avg'],
+        'volume > avg': latest['volume'] > latest['vol_avg'],
+        'range > avg': latest['range'] > df['range'].mean()
+    }
+
+    # Sideways Market Detection
+    recent_range = latest['range']
+    low_volatility = latest['atr'] < latest['atr_avg']
+    low_adx = latest['adx'] < 20
+    sideways = low_volatility and low_adx
+
+    # Potential Breakout Levels
+    breakout_levels = ""
+    if sideways:
+        breakout_levels = f"⚠️ Sideways market detected.\nWatch for breakout above 🔼 {latest['resistance']:.2f} or breakdown below 🔽 {latest['support']:.2f}."
+
+    # Utility to display condition results
+    def split_condition_flags(cond_dict):
+        true_keys = [k for k, v in cond_dict.items() if v]
+        false_keys = [k for k, v in cond_dict.items() if not v]
+        return f"✅ {', '.join(true_keys)} | ❌ {', '.join(false_keys)}"
+
+    buy_signal_summary = split_condition_flags(returncorebuy)
+    sell_signal_summary = split_condition_flags(returncoresell)
+    # Check if price broke resistance or support with trend alignment
+    broke_resistance = latest['close'] > latest['resistance'] and latest['ema_9'] > latest['ema_20']
+    broke_support = latest['close'] < latest['support'] and latest['ema_9'] < latest['ema_20']
+
+    broke_above_fib = any(latest['close'] > price for level, price in fib_levels.items() if level in ['61.8%', '78.6%']) and latest['ema_9'] > latest['ema_20']
+    broke_below_fib = any(latest['close'] < price for level, price in fib_levels.items() if level in ['61.8%', '78.6%']) and latest['ema_9'] < latest['ema_20']
+
+    near_support = abs(latest['close'] - latest['support']) <= latest['atr']
+    near_resistance = abs(latest['close'] - latest['resistance']) <= latest['atr']
+    near_fib = any(abs(latest['close'] - lvl) <= latest['atr'] for lvl in fib_levels.values())
+
+    # Final decision
+    if all(core_buy) and sum(supporting_buy) >= 2:
+        signal = "buy"
+        trend_message = "✅ Buy signal confirmed. Trending setup."
+    elif all(core_sell) and sum(supporting_sell) >= 2:
+        signal = "sell"
+        trend_message = "✅ Sell signal confirmed. Trending setup."
+    elif broke_resistance or broke_above_fib:
+        signal = "buy"
+        trend_message = "📈 Breakout above resistance or key Fibonacci level detected. Buy momentum building."
+    elif broke_support or broke_below_fib:
+        signal = "sell"
+        trend_message = "📉 Breakdown below support or Fibonacci level detected. Sell pressure increasing."
+    elif near_support or near_resistance or near_fib:
+        signal = "wait"
+        trend_message = (
+            f"⚠️ Price near key {'support' if near_support else 'resistance' if near_resistance else 'Fibonacci'} level.\n"
+            f"💡 Wait for breakout or confirmation before entering a trade."
+        )
+    elif sideways:
+        signal = "sideways"
+        trend_message = "📉 Sideways market detected. Watch breakout above/below key levels."
+    else:
+        signal = "no_trade"
+        trend_message = "⏳ No strong trend or breakout setup yet. Wait for better confirmation."
+
+    print({
+        "buy_signals": buy_signal_summary,
+        "sell_signals": sell_signal_summary,
+        "final_signal": signal,
+        "sideways_info": breakout_levels,
+        "support": round(latest['support'], 2),
+        "resistance": round(latest['resistance'], 2),
+        "fibonacci_levels": fib_levels,
+        "current_price": round(latest['close'], 2),
+        'trend_message':trend_message
+    })
+    return {
+        "buy_signals": buy_signal_summary,
+        "sell_signals": sell_signal_summary,
+        "final_signal": signal,
+        "sideways_info": breakout_levels,
+        "support": round(latest['support'], 2),
+        "resistance": round(latest['resistance'], 2),
+        "fibonacci_levels": fib_levels,
+        "current_price": round(latest['close'], 2),
+        'trend_message':trend_message
+    }
+
+
 def buycall(df,extractsymbol,level,condition):
     product = getproduct(df.close.values[-1], 'C')
     itemclose = df.close.values[-1]
@@ -1001,6 +1195,50 @@ def load_data():
     except (FileNotFoundError, json.JSONDecodeError):
         return {}  # Return empty if file not found or corrupted
 
+def storetrend(symbol, trend,returncorebuy,returncoresell,trend_message,signal_data):
+    load = load_data()
+    print("------------", load)
+
+    if 'store' not in load or not isinstance(load['store'], list):
+        load['store'] = []
+
+    updated = False
+    for item in load['store']:
+        if item['symbol'] == symbol:
+            item['trend'] = trend
+            item['returncorebuy'] = str(returncorebuy)
+            item['returncoresell'] = str(returncoresell)
+            item['trend_message'] = trend_message
+            item['fibonacci_levels'] = str(signal_data['fibonacci_levels'])
+            item['resistance'] = str(signal_data['resistance'])
+            item['support'] = str(signal_data['support'])
+            item['sideways_info'] = str(signal_data['sideways_info'])
+            item['current_price'] = str(signal_data['current_price'])
+
+            updated = True
+            break
+
+    if not updated:
+        const = {
+            'symbol': symbol,
+            'trend': trend,
+            'returncorebuy': str(returncorebuy),
+            'returncoresell': str(returncoresell),
+            'trend_message': trend_message,
+            'fibonacci_levels' : str(signal_data['fibonacci_levels']),
+            'resistance' : str(signal_data['resistance']),
+            'support' : str(signal_data['support']),
+            'sideways_info' : str(signal_data['sideways_info']),
+            'current_price': str(signal_data['current_price'])
+        }
+        load['store'].append(const)
+
+    save_data(load)
+
+def save_data(data):
+    with open(DATA_FILE, "w") as file:
+        json.dump(data, file, indent=4)
+
 def stetergytosendalert(symbol, interwal, data, level, closehigh, closelow):
     df = data
     extractsymbol = ''.join(symbol[i] for i in [0,1, 2])
@@ -1022,10 +1260,15 @@ def stetergytosendalert(symbol, interwal, data, level, closehigh, closelow):
             print('check all data')
             trend_duration = 2
             checkdata = process_advanced_signals(df, trend_duration)
+            signal_data = get_trade_signal(checkdata,symbol)
+            check_trend = signal_data["final_signal"]
+            storetrend(symbol,signal_data["final_signal"],signal_data["buy_signals"],signal_data["sell_signals"],signal_data['trend_message'],signal_data)
+            check_trend_Buy_condition = (check_trend == 'buy')
+            check_trend_sell_condition = (check_trend == 'sell')
             latest_data = checkdata.iloc[-1]
             # print('gfh',checktrending.checktrend(df))
             # print(latest_data)
-            if latest_data['buy_signal']:
+            if latest_data['buy_signal'] and check_trend_Buy_condition:
                 bot_message = f"BUY Signal Detected: {symbol} at {latest_data['close']}"
                 # sendAlert(bot_message)
                 # print(f"BUY Signal Detected: {symbol} at {latest_data['close']}")
@@ -1034,7 +1277,7 @@ def stetergytosendalert(symbol, interwal, data, level, closehigh, closelow):
                 elif auto_trade['buy_or_sell'] == 'SELL':
                     sellput(df,extractsymbol,level,'sell_signal')
 
-            elif latest_data['sell_signal']:
+            elif latest_data['sell_signal'] and check_trend_sell_condition:
                 bot_message = f"sell Signal Detected: {symbol} at {latest_data['close']}"
                 # sendAlert(bot_message)
                 # print(f"SELL Signal Detected: {symbol} at {latest_data['close']}")
@@ -1043,7 +1286,7 @@ def stetergytosendalert(symbol, interwal, data, level, closehigh, closelow):
                 elif auto_trade['buy_or_sell'] == 'SELL':
                     sellcall(df,extractsymbol,level,'sell_signal')
 
-            elif latest_data['support_on_9ema']:
+            elif latest_data['support_on_9ema'] and check_trend_Buy_condition:
                 # bot_message = f"\n🟢 Support Detected on 9 EMA: {symbol} at {latest_data['close']}"
                 # sendAlert(bot_message)
                 print(f"\n🟢 Support Detected on 9 EMA: {symbol} at {latest_data['close']}")
@@ -1054,7 +1297,7 @@ def stetergytosendalert(symbol, interwal, data, level, closehigh, closelow):
                 elif auto_trade['buy_or_sell'] == 'SELL':
                     sellput(df,extractsymbol,level,'support_on_9ema')
 
-            elif latest_data['support_on_20ema']:
+            elif latest_data['support_on_20ema'] and check_trend_Buy_condition:
                 # bot_message = f"\n🟢 Support Detected on 20 EMA: {symbol} at {latest_data['close']}"
                 # sendAlert(bot_message)
                 print('support_on_20ema')
@@ -1065,7 +1308,7 @@ def stetergytosendalert(symbol, interwal, data, level, closehigh, closelow):
                 elif auto_trade['buy_or_sell'] == 'SELL':
                     sellput(df,extractsymbol,level,'Support Detected on 20 EMA')
 
-            elif latest_data['resistance_on_9ema']:
+            elif latest_data['resistance_on_9ema'] and check_trend_sell_condition:
                 print('resistance_on_9ema')
                 logging.info(f"\n🟢 Support Detected on resistance_on_9ema: {symbol} at {latest_data['close']}")
                 print(f"\n🟢 Support Detected on resistance_on_9ema: {symbol} at {latest_data['close']}")
@@ -1074,7 +1317,7 @@ def stetergytosendalert(symbol, interwal, data, level, closehigh, closelow):
                 elif auto_trade['buy_or_sell'] == 'SELL':
                     sellcall(df,extractsymbol,level,'resistance_on_9ema')
 
-            elif latest_data['resistance_on_20ema']:
+            elif latest_data['resistance_on_20ema'] and check_trend_sell_condition:
                 print('resistance_on_20ema')
                 logging.info(f"\n🟢 Support Detected on resistance_on_20ema: {symbol} at {latest_data['close']}")
                 if auto_trade['buy_or_sell'] == 'BUY':
@@ -1193,7 +1436,7 @@ exitstetergywithema()
 schedule.every(30).seconds.do(stetergy)
 # exitstetergy()
 schedule.every(5).seconds.do(exitstetergy)
-# schedule.every(10).seconds.do(exitstetergywithema)
+schedule.every(10).seconds.do(exitstetergywithema)
 
 
 # schedule.every(5).seconds.do(stetergy)

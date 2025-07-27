@@ -89,14 +89,14 @@ def home():
                 "BANKNIFTY": request.form.get("trade_banknifty") == "on",
                 "SENSEX": request.form.get("trade_SENSEX") == "on",
                 "buy_or_sell": request.form.get("buy_or_sell"),  # Add this line
-                # 'store': form_data['store']
+                'store': form_data['store']
 
             }
             save_data(form_data)
     except Exception as e:
         return f"An error occurred: {e}"
 
-    return render_template('index.html', fetchdata=fetchdata, filter_date=filter_date,form_data=form_data, **result)
+    return render_template('index.html', fetchdata=fetchdata, filter_date=filter_date,form_data=form_data,store=form_data['store'], **result)
 
 
 if __name__ == '__main__':

@@ -152,6 +152,6 @@ def todayorderdata():
     return returndata
 # print(getcvon())
 # updateall()
-# deletecrypto(455)
+# deletecrypto(512)
 # updatecrypto(439,0,0)
 

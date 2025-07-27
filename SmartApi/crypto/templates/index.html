@@ -3,6 +3,23 @@
 <head>
     <title>Crypto Order Book</title>
 </head>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 <body>
     <h1>Crypto Order Book Summary</h1>
 
@@ -96,7 +113,46 @@
     <p>Number of Orders: {{ order_count }}</p>
     <p>Brokerage: {{ brokerage }}</p>
     <p>stoplossorder {{stoplossorder}}</p>
+<h2>Current Market Trends</h2>
+   <form method="POST">
+<table>
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Trend</th>
+            <th>Core Buy</th>
+            <th>Core Sell</th>
+            <th>sideways_info</th>
+            <th>support</th>
+            <th>resistance </th>
+            <th>fibonacci_levels</th>
+            <th>current_price</th>
 
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in store %}
+        <tr>
+            <td>{{ item.symbol }}</td>
+            <td>{{ item.trend }}</td>
+             <td>{{ item.returncorebuy }}</td>
+             <td>{{ item.returncoresell }}</td>
+            <td>{{ item.sideways_info }}</td>
+            <td>{{ item.support }}</td>
+<!--            <td>-->
+<!--            <input type="number" name="support" value="{{ form_data.get('support', '') }}" required>-->
+<!--            </td>-->
+            <td>{{ item.resistance }}</td>
+            <td>{{ item.fibonacci_levels }}</td>
+            <td>{{ item.current_price }}</td>
+
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+   </form>
     <h2>Order Details</h2>
     <table border="1">
         <tr>

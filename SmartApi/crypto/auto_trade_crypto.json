@@ -1,13 +1,27 @@
 {
     "auto_place_order": true,
-    "stop_loss": "2",
+    "stop_loss": "1",
     "lotsize": "1",
-    "target_points": "300",
-    "loss_points": "150",
-    "trade_range_min": "5",
+    "target_points": "15",
+    "loss_points": "10",
+    "trade_range_min": "15",
     "trade_range_max": "15",
     "NIFTY": false,
     "BANKNIFTY": false,
     "SENSEX": false,
-    "buy_or_sell": "SELL"
+    "buy_or_sell": "BUY",
+    "store": [
+        {
+            "symbol": "BTCUSD",
+            "trend": "wait",
+            "returncorebuy": "\u2705 ema > ema20, adx > 20, atr > atr_avg, range > avg | \u274c close > ema9, ema_slope > 0.1, volume > avg",
+            "returncoresell": "\u2705 close < ema9, adx > 20, ema_slope < -0.1, atr > atr_avg, range > avg | \u274c ema < ema20, volume > avg",
+            "trend_message": "\u26a0\ufe0f Price near key Fibonacci level.\n\ud83d\udca1 Wait for breakout or confirmation before entering a trade.",
+            "fibonacci_levels": "{'highest_price': 117841.13, 'lowest_price': 117746.67, '0.786': 117821, '0.618': 117805, '0.5': 117794, '0.382': 117783, '0.236': 117769, '0': 117746.67}",
+            "resistance": "117969.23",
+            "support": "117361.23",
+            "sideways_info": "",
+            "current_price": "117749.33"
+        }
+    ]
 }

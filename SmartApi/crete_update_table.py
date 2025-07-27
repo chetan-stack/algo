@@ -410,7 +410,7 @@ def get_data(script):
 #
 # checkcondition()
 
-# deleteordertoken(2071)
+# deleteordertoken(2249)
 
 def createmaxprofit(id,symbol,token,lotsize,profit_or_loss):
     fetch = fetchhightaregtid(id)

@@ -2,9 +2,9 @@
     "auto_place_order": true,
     "stop_loss": "2",
     "lotsize": "1",
-    "target_points": "30",
-    "loss_points": "40",
-    "trade_range_min": "5",
+    "target_points": "10",
+    "loss_points": "10",
+    "trade_range_min": "15",
     "trade_range_max": "15",
     "NIFTY": true,
     "BANKNIFTY": false,
@@ -13,39 +13,39 @@
     "store": [
         {
             "symbol": "SENSEX",
-            "trend": "wait",
-            "returncorebuy": "\u2705 adx > 20 | \u274c ema > ema20, close > ema9, ema_slope > 0.1, atr > atr_avg, volume > avg, range > avg",
-            "returncoresell": "\u2705 ema < ema20, close < ema9, adx > 20, ema_slope < -0.1 | \u274c atr > atr_avg, volume > avg, range > avg",
-            "trend_message": "\u26a0\ufe0f Price near key support level.\n\ud83d\udca1 Wait for breakout or confirmation before entering a trade.",
+            "trend": "buy",
+            "returncorebuy": "\u2705 ema > ema20, close > ema9, adx > 20, ema_slope > 0.1, range > avg | \u274c atr > atr_avg, volume > avg",
+            "returncoresell": "\u2705 adx > 20, range > avg | \u274c ema < ema20, close < ema9, ema_slope < -0.1, atr > atr_avg, volume > avg",
+            "trend_message": "\u2705 Buy signal confirmed. Trending setup.",
             "fibonacci_levels": "{}",
-            "resistance": "82563.25",
-            "support": "82481.23",
+            "resistance": "81781.99",
+            "support": "81304.1",
             "sideways_info": "",
-            "current_price": "82492.18"
+            "current_price": "81753.39"
         },
         {
             "symbol": "BANKNIFTY",
-            "trend": "wait",
-            "returncorebuy": "\u2705 ema > ema20, close > ema9, adx > 20, ema_slope > 0.1 | \u274c atr > atr_avg, volume > avg, range > avg",
-            "returncoresell": "\u2705 adx > 20 | \u274c ema < ema20, close < ema9, ema_slope < -0.1, atr > atr_avg, volume > avg, range > avg",
-            "trend_message": "\u26a0\ufe0f Price near key resistance level.\n\ud83d\udca1 Wait for breakout or confirmation before entering a trade.",
-            "fibonacci_levels": "{'highest_price': 56669.3, 'lowest_price': 56443.85, '0.786': 56621, '0.618': 56583, '0.5': 56557, '0.382': 56530, '0.236': 56497, '0': 56443.85}",
-            "resistance": "56626.8",
-            "support": "56568.25",
+            "trend": "buy",
+            "returncorebuy": "\u2705 ema > ema20, close > ema9, adx > 20, ema_slope > 0.1, range > avg | \u274c atr > atr_avg, volume > avg",
+            "returncoresell": "\u2705 adx > 20, range > avg | \u274c ema < ema20, close < ema9, ema_slope < -0.1, atr > atr_avg, volume > avg",
+            "trend_message": "\u2705 Buy signal confirmed. Trending setup.",
+            "fibonacci_levels": "{'highest_price': 55873.6, 'lowest_price': 55511.8, '0.786': 55796, '0.618': 55735, '0.5': 55693, '0.382': 55650, '0.236': 55597, '0': 55511.8}",
+            "resistance": "55873.6",
+            "support": "55511.8",
             "sideways_info": "",
-            "current_price": "56623.0"
+            "current_price": "55845.05"
         },
         {
             "symbol": "NIFTY",
-            "trend": "sell",
-            "returncorebuy": "\u2705 adx > 20, atr > atr_avg, range > avg | \u274c ema > ema20, close > ema9, ema_slope > 0.1, volume > avg",
-            "returncoresell": "\u2705 ema < ema20, close < ema9, adx > 20, ema_slope < -0.1, atr > atr_avg, range > avg | \u274c volume > avg",
-            "trend_message": "\u2705 Sell signal confirmed. Trending setup.",
-            "fibonacci_levels": "{'highest_price': 25222.4, 'lowest_price': 25081.3, '0.786': 25192, '0.618': 25168, '0.5': 25152, '0.382': 25135, '0.236': 25115, '0': 25081.3}",
-            "resistance": "25220.1",
-            "support": "25199.25",
+            "trend": "buy",
+            "returncorebuy": "\u2705 ema > ema20, close > ema9, adx > 20, ema_slope > 0.1, atr > atr_avg, range > avg | \u274c volume > avg",
+            "returncoresell": "\u2705 adx > 20, atr > atr_avg, range > avg | \u274c ema < ema20, close < ema9, ema_slope < -0.1, volume > avg",
+            "trend_message": "\u2705 Buy signal confirmed. Trending setup.",
+            "fibonacci_levels": "{'highest_price': 25010.35, 'lowest_price': 24844.45, '0.786': 24975, '0.618': 24947, '0.5': 24927, '0.382': 24908, '0.236': 24884, '0': 24844.45}",
+            "resistance": "24916.85",
+            "support": "24854.8",
             "sideways_info": "",
-            "current_price": "25206.65"
+            "current_price": "24894.8"
         }
     ]
 }

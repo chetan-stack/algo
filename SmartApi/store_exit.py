@@ -216,31 +216,33 @@ def exitstetergy(df,level,item):
     # print("-------chytcj======",first_string,loaddata[0])
     filterloaddata = [item for item in loaddata if item['symbol'] == first_string]
     # print("-----",filterloaddata)
-    if df.close.values[-1] < df.ema9.values[-1] and datematch:
-        store = {
-                'symbol': symbol,
-                'count':1
-            }
-        maxcount = 2
-        if len(storewaitlimit) > 0:
-            for item in storewaitlimit:
-                if symbol == item['symbol']:
-                    item['count'] += 1
-                    if item['count'] > maxcount:
-                         orderplaced = True
-                else:
-                    storewaitlimit.append(store)
-        else:
-             storewaitlimit.append(store)
+    # if df.close.values[-1] < df.ema9.values[-1] and datematch:
+    #     store = {
+    #             'symbol': symbol,
+    #             'count':1
+    #         }
+    #     maxcount = 2
+    #     if len(storewaitlimit) > 0:
+    #         for item in storewaitlimit:
+    #             if symbol == item['symbol']:
+    #                 item['count'] += 1
+    #                 if item['count'] > maxcount:
+    #                      orderplaced = True
+    #             else:
+    #                 storewaitlimit.append(store)
+    #     else:
+    #          storewaitlimit.append(store)
 
 
-    elif df.close.values[-1] < less_than and datematch:
-        orderplaced = True
-    elif df.close.values[-1] > greater_than and datematch:
-        orderplaced = True
+    # elif df.close.values[-1] < less_than and datematch:
+    #     orderplaced = True
+    # elif df.close.values[-1] > greater_than and datematch:
+    #     orderplaced = True
 
-    elif filterloaddata == 'no_trade':
-        orderplaced = True
+    # elif filterloaddata == 'no_trade':
+    #     orderplaced = True
+
+
 
     if orderplaced:
        if True:
@@ -378,8 +380,15 @@ def exitstetergysell(df,level,item,headge):
     target_points = float(fetchtarget['target_points'])
     loss_points = float(fetchtarget['loss_points'])
     if ltp <= (buyprice - target_points) or ltp >= (buyprice + loss_points):
-        orderplaced = True
         reason = "target or stoploss hit"
+        orderplaced = True
+        # if 'PE' in symbol and loaddata['buy_or_sell'] == 'BUY':
+        #     target_points += 5
+        #
+        # if 'CE' in symbol and loaddata['buy_or_sell'] == 'SELL':
+        #     target_points += 5
+        # else:
+        #     orderplaced = True
 
     # elif ltp <= float(detecttarget['target_rr']):
     #     orderplaced = True
@@ -390,10 +399,10 @@ def exitstetergysell(df,level,item,headge):
     # elif ltp <= float(detecttarget['target_pivot']):
     #     orderplaced = True
     #     reason = "pivot_s2_hit"
-    elif df.close.values[-1] < less_than and datematch:
-        orderplaced = True
-    elif df.close.values[-1] > greater_than and datematch:
-        orderplaced = True
+    # elif df.close.values[-1] < less_than and datematch:
+    #     orderplaced = True
+    # elif df.close.values[-1] > greater_than and datematch:
+    #     orderplaced = True
 
     if orderplaced:
        if True:

@@ -1,0 +1,4 @@
+[I 250704 09:21:16 testsomething:109] on open
+[W 250704 12:13:30 smartWebSocketV2:319] Attempting to resubscribe/reconnect (Attempt 1)...
+[E 250704 12:13:31 smartWebSocketV2:212] Error occurred during subscribe: [Errno 32] Broken pipe
+[I 250704 12:13:40 testsomething:109] on open
